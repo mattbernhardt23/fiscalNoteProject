@@ -13,8 +13,10 @@ export default function Directory() {
     }, []);
 
     const filteredEmployees = employees.filter((employee) =>
-        employee.name.toLowerCase().includes(searchTerm.toLowerCase())
+        employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        employee.department.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
 
     return (
         <div className="container mx-auto p-6">
