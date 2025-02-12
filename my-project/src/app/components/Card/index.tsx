@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Card({
     name,
     role,
@@ -20,7 +22,7 @@ export default function Card({
     return (
         <div className={`bg-white shadow-md p-4 rounded-3xl flex flex-row items-center w-full min-w-[800px] border-4 ${borderColor} transition-transform duration-300 ease-in-out hover:scale-105`}>
             <div className="w-1/6 flex justify-center">
-                <img
+                <Image
                     src={profilePicture}
                     alt={name}
                     className="w-16 h-16 rounded-full object-cover"
